@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const DOWNLOAD_URL = 'https://github.com/ivandkriddd/velocity/releases/download/v1.0.0/Velocity%20Setup%201.0.0.exe';
+const DOWNLOAD_URL = 'https://github.com/ivandkriddd/velocity/releases/download/v1.0.0/Velocity.Setup.1.0.0.exe';
 
 app.use(express.static(path.join(__dirname, 'website')));
 
