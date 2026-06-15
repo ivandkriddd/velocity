@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velocity Browser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-brand">
+        <img src="icon.svg" alt="Velocity" width="24" height="24">
+        <span>Velocity</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#download" class="nav-download">Download</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-icon">
+        <img src="icon.svg" alt="Velocity" width="80" height="80">
+      </div>
+      <h1>Velocity <span class="accent">Browser</span></h1>
+      <p class="hero-sub">A fast, modern Chromium-based browser with built-in VPN, extension support, tab groups, and password manager.</p>
+      <a href="/download" class="download-btn" id="download-link">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download for Windows
+      </a>
+      <p class="download-info">Version 1.0.0 &bull; ~105 MB &bull; Windows 10+</p>
+    </div>
+    <div class="hero-preview">
+      <div class="browser-frame">
+        <div class="frame-bar">
+          <span></span><span></span><span></span>
+          <div class="frame-url">velocity://newtab</div>
+        </div>
+        <div class="frame-content">
+          <div class="frame-clock">10:32</div>
+          <div class="frame-greeting">Good evening</div>
+          <div class="frame-search">
+            <span>Search Google or enter URL...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3>Tab Groups</h3>
+        <p>Organize tabs with color-coded groups. Collapse, expand, and manage with ease.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Built-in VPN</h3>
+        <p>Free proxy-based VPN with servers across US, EU, and Asia. Toggle on/off instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>Import from Chrome</h3>
+        <p>Seamlessly import bookmarks, history, extensions, and saved passwords from Chrome, Brave, or Edge.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Extensions</h3>
+        <p>Load Chrome, Brave, and Edge extensions directly. Full support for most Chrome extension APIs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Password Manager</h3>
+        <p>Auto-detect login forms, save credentials, and auto-fill with one click.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        </div>
+        <h3>Session Restore</h3>
+        <p>Never lose your tabs. Full session persistence across restarts with 400+ tab capability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="download-section">
+    <h2>Get Velocity</h2>
+    <p>Free and open source. No ads, no tracking, no nonsense.</p>
+    <div class="download-platforms">
+      <a href="/download" class="platform-btn windows">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M0 0h11.4v11.4H0V0zM12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zM12.6 12.6H24V24H12.6V12.6z"/></svg>
+        <div class="platform-text">
+          <span class="platform-label">Download for</span>
+          <span class="platform-name">Windows</span>
+        </div>
+      </a>
+    </div>
+    <div class="checksum">
+      <p>SHA-256: <code>55515733809cf1d58ba51794b5533fde1ca5777f8ec7be71fcf37d6a8cb8c8d8</code></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="icon.svg" alt="Velocity" width="20" height="20">
+        <span>Velocity Browser</span>
+      </div>
+      <p>&copy; 2026 Velocity Browser. Built with Electron.</p>
+    </div>
+  </footer>
+</body>
+</html>
