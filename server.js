@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'website')));
 
-const DOWNLOAD_URL = 'https://github.com/ivandkriddd/velocity/releases/download/v1.0.0/Velocity.Setup.1.0.0.exe';
+const DOWNLOAD_URL = 'https://github.com/ivandkriddd/velocity/releases/download/v1.1.0/Velocity.Setup.1.1.0.exe';
 const JWT_SECRET = process.env.JWT_SECRET || 'velocity-sync-secret-change-in-production';
 const FIRESTORE_COLLECTION = 'users';
 
