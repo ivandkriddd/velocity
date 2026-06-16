@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const cors = require('cors');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
@@ -17,13 +18,18 @@ let db = null;
 
 try {
   const admin = require('firebase-admin');
+  let serviceAccount;
   if (process.env.FIREBASE_SERVICE_ACCOUNT) {
-    const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+  } else if (fs.existsSync(path.join(__dirname, 'key.json'))) {
+    serviceAccount = JSON.parse(fs.readFileSync(path.join(__dirname, 'key.json'), 'utf-8'));
+  }
+  if (serviceAccount) {
     admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
     db = admin.firestore();
-    console.log('Firestore connected');
+    console.log('Firestore connected via ' + (process.env.FIREBASE_SERVICE_ACCOUNT ? 'env var' : 'key.json'));
   } else {
-    console.log('FIREBASE_SERVICE_ACCOUNT not set — sync API disabled');
+    console.log('No Firebase credentials found — sync API disabled');
   }
 } catch (e) {
   console.log('Firebase not available — sync API disabled:', e.message);
